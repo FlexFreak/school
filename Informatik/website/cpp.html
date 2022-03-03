@@ -1,0 +1,98 @@
+<html>
+<head>
+    <meta charset ="utf-8"/>
+    <title>
+        Meine Startseite
+    </title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+    <body>
+        <h1>
+            hallo das ist meine Haupseite
+        </h1>
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="testing.html">Testing</a>
+            <div class="dropdown">
+              <button class="dropbtn">Dropdown
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div>
+            </div>
+        </div>
+        <nav>
+            <h1><a href="#Einsatzgebiete"/>Einsatzgebiete</h1>
+            <h1><a href="#Sprachdesign"/>Sprachdesign</h1>
+            <h3><a href="#Sichtbarkeit privater Elemente">Sichtbarkeit privater Elemente</a></h3>
+        </nav>
+        <article>
+            C++ ist eine von der ISO genormte Programmiersprache. Sie wurde ab 1979 von Bjarne Stroustrup bei AT&T als Erweiterung der Programmiersprache C entwickelt. C++ ermöglicht sowohl die effiziente und maschinennahe Programmierung als auch eine Programmierung auf hohem Abstraktionsniveau. Der Standard definiert auch eine Standardbibliothek, zu der verschiedene Implementierungen existieren.
+            <h1><a name="Einsatzgebiete"/>Einsatzgebiete</h1>
+            <p> 
+                C++ wird sowohl in der Systemprogrammierung als auch in der Anwendungsprogrammierung eingesetzt und gehört in beiden Bereichen zu den verbreitetsten Programmiersprachen.[6]
+            </p>
+            <h3>
+                Systemprogrammierung
+            </h3>
+            <p>
+                Typische Anwendungsfelder in der Systemprogrammierung sind Betriebssysteme, eingebettete Systeme, virtuelle Maschinen, Treiber und Signalprozessoren. C++ nimmt hier oft den Platz ein, der früher ausschließlich Assemblersprachen und der Programmiersprache C vorbehalten war.
+            </p>
+            <h3>
+                Anwendungsprogrammierung
+            </h3>
+            <p>
+                Bei der Anwendungsprogrammierung kommt C++ vor allem dort zum Einsatz, wo hohe Anforderungen an die Effizienz gestellt werden, um durch technische Rahmenbedingungen vorgegebene Leistungsgrenzen möglichst gut auszunutzen. Ab dem Jahr 2000 wurde C++ aus der Domäne der Anwendungsprogrammierung von den Sprachen Java und C# zurückgedrängt.            </p>
+            </p>
+            <h1><a name="Sprachdesign"/>Sprachdesign</h1>
+            <p>
+                Die Sprache C++ verwendet nur etwa 60 Schlüsselwörter („Sprachkern“), manche werden in verschiedenen Kontexten (static, default) mehrfach verwendet. Ihre eigentliche Funktionalität erhält sie, ähnlich wie auch die Sprache C, durch die C++-Standardbibliothek, die der Sprache fehlende wichtige Funktionalitäten beibringt (Arrays, Vektoren, Listen, ...) wie auch die Verbindung zum Betriebssystem herstellt (iostream, fopen, exit, ...). Je nach Einsatzgebiet kommen weitere Bibliotheken und Frameworks dazu. C++ legt einen Schwerpunkt auf die Sprachmittel zur Entwicklung von Bibliotheken. Dadurch favorisiert es verallgemeinerte Mechanismen für typische Problemstellungen und besitzt kaum in die Sprache integrierte Einzellösungen.
+            </p>
+            <p>
+                Eine der Stärken von C++ ist die Kombinierbarkeit von effizienter, maschinennaher Programmierung mit mächtigen Sprachmitteln, die einfache bis komplexe Implementierungsdetails zusammenfassen und weitgehend hinter abstrakten Befehlsfolgen verbergen. Dabei kommt vor allem die Template-Metaprogrammierung zum Zuge: Eine Technik, die eine nahezu kompromisslose Verbindung von Effizienz und Abstraktion erlaubt.
+            </p>
+            <p>
+                Einige Design-Entscheidungen werden allerdings auch häufig kritisiert:
+            </p>
+            <h3>
+                Ressourcenverwaltung
+            </h3>
+            <p>
+                C++ hat keine Garbage Collection, allerdings gibt es Bestrebungen, Garbage-Collection durch Bibliotheken oder durch Aufnahme in den Sprachstandard zu ermöglichen.Siehe auch Boehm-Speicherbereinigung.
+            </p>
+            <p>
+                Es ist jedoch möglich, Speicher im Programm zu verwalten; zur Implementierung von Low-Level-Bibliotheken wie der C++-Standardbibliothek ist es notwendig. In High-Level-Code wird hiervon jedoch dringend abgeraten.
+            </p>
+            <p>
+                Stattdessen ist es dort üblich, die Speicherverwaltung von der C++-Standardbibliothek übernehmen zu lassen, indem man die angebotenen Containerklassen verwendet. Andere Ressourcen, z. B. Dateihandles oder Netzwerksockets werden in C++ üblicherweise in eigenen Klassen mit dem Prinzip RAII verwaltet, um das automatische Aufräumen nach der Verwendung sicherzustellen.
+            </p>
+            <p>
+                Wenn man selbst in Objekten auf andere Objekte verweist, arbeitet man, als Alternative zu einem Garbage Collector, üblicherweise mit Smart Pointern, die die Ressourcenverwaltung dann übernehmen. Die Standardbibliothek verwendet hier intern meist Reference counting.
+            </p>
+            <h3>
+                Unvollständige Objektorientierung
+            </h3>
+            <h3><a name="Sichtbarkeit privater Elemente"/>Sichtbarkeit privater Elemente</h3>
+            <p>
+                In C++ gehören private Eigenschaften (Variablen und Methoden) normalerweise mit zur Schnittstelle, die in der Header-Datei veröffentlicht ist. Dadurch entstehen zur Compilezeit und zur Laufzeit Abhängigkeiten der Objekte zu den Stellen, die sie verwenden.
+            </p>
+            <p>
+                Diese Abhängigkeiten können durch bestimmte Konstruktionen, wie dem pimpl-Idiom (pointer to implementation idiom), vermieden werden. Dabei werden die privaten Felder der Klasse (example_class) in eine private, vorwärts-deklarierte Hilfsklasse verschoben, und ein Zeiger auf ein Objekt dieser Hilfsklasse (example_class::impl * impl_ptr) bleibt in der eigentlichen Klasse. Die Definition der implementierenden Klasse findet bei der Implementierung der öffentlichen Klasse statt und ist damit für den Verwender der Klasse (der nur die Header-Datei kennt) unsichtbar. Dadurch, dass die Hilfsklasse nur durch einen Zeiger referenziert wird, bleiben alle Quelltextänderungen an privaten Feldern transparent und die Binärkompatibilität wird erhalten.
+            </p>
+            <h3><a name="Unvollständige Kapselung"/>Unvollständige Kapselung</h3>
+            <p>
+                In C++ sind die Speicherbereiche der einzelnen Objekte zur Laufzeit nicht vor (absichtlichen oder versehentlichen) gegenseitigen Änderungen geschützt.
+            </p>
+            <h3><a name="Undefiniertes Verhalten"/>Undefiniertes Verhalten</h3>
+            <p>
+                Das Verhalten von einigen Sprachkonstrukten ist nicht definiert. Dies bedeutet, dass der Standard weder vorgibt noch empfiehlt, was in einem solchen Fall passiert. Die Auswirkungen reichen von Implementierungsabhängigkeit (d. h. je nach Zielrechner und Compiler kann sich das Konstrukt unterschiedlich verhalten) über unsinnige Ergebnisse oder Programmabstürze bis hin zu Sicherheitslücken. Einige dieser Freiheiten des Compilers lassen zusätzliche Optimierungen des Codes zu.
+            </p>
+            <p>
+    
+            </p>
+        </article>
+    </body>
+</html>

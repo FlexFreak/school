@@ -1,0 +1,108 @@
+/* Selektoren */
+
+img {width:32px;}
+
+body{background-color: black;}
+
+h1{color: white;}
+
+/* Navbar container */
+.navbar {
+    overflow: hidden;
+    background-color: rgb(30, 30, 30);
+    font-family: Arial;
+  }
+  
+  /* Links inside the navbar */
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* The dropdown container */
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  /* Dropdown button */
+  .dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+  }
+  
+  /* Add a red background color to navbar links on hover */
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    color: #df8e00
+  }
+  
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(30, 30, 30);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    float: none;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  nav {
+    float: left;
+    width: 15%;
+    color: white;
+    background-color: rgb(45, 45, 45);
+    height: 300px;
+  }
+
+   article{
+    float: right;
+    width: 85%;
+    color: white;
+    background-color: rgb(30, 30, 30);
+    height: 300px;
+  }
+
+  input{
+    background-color:rgb(45, 45, 45);
+    color: white;
+    border: 0px;
+    width: 5%;
+  }
+
+  .button1{
+    background-color:rgb(50, 50, 50);
+    border: 0px;
+    color: white;
+    outline: none;
+  }
+  .button1:hover{
+    border: 3px;
+    border-color:#df8e00;
+    outline: none;
+  }
