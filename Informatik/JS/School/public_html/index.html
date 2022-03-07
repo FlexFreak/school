@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>caesar Verschlüsselung</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script type="text/javascript">
+            function ver() {
+                var alpha = "abcdefghijklmnopqrstuvwxyzäöü ";
+                var chiffre = "";
+                var a = 3;
+                text = "hallo heute ist ein schöner tag";
+                text = text.toLowerCase();
+                for(i=0; i<text.length; i++) {
+                    var char_index= text.charAt(i);
+                    var c= alpha.indexOf(char_index) + a%alpha.length;        //position in alpha
+                    var d = alpha.charAt(c);                    //encrypted char
+                    chiffre += d;
+                    //debugging stuff:
+                    //document.write(b);
+                    //document.write(c);
+                    //document.write(e);
+                }
+                document.write(chiffre);
+                /*
+                 *  for(i=0; i<text.length; i++) {
+                    var char_index= text.charAt(i);
+                    var c= alpha.indexOf(char_index) + a;        //position in alpha
+                    var e= c - alpha.length;
+                    if(e >= 0) {
+                        c= e;
+                    }
+                    var d = alpha.charAt(c);                    //encrypted char
+                    chiffre += d;
+                 */
+                /* extra compact Version
+                for(i=0; i<laenge; i++) 
+                    if(alpha.indexOf(text.charAt(i)) + a -alpha.length>=0) {
+                        chiffre += alpha.charAt(alpha.indexOf(text.charAt(i)) + a -alpha.length);
+                    }
+                    else {
+                        chiffre += alpha.charAt(alpha.indexOf(text.charAt(i)) + a)
+                    }
+                }
+                */
+               
+            }
+            ver();
+        </script>
+    </body>
+</html>
