@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+        <script type="text/javascript">
+            
+            function getNumbers(stellen) {
+                var lotto = new Array(0);
+                for(i=0; i < stellen; i++) {
+                    zahl = Math.floor(Math.random() * 49);
+                    for(a=0; a <= lotto.length; a++) {
+                        if(lotto.indexOf(a) === zahl) {
+                            //document.write("doppelt");
+                            break;
+                        }
+                        else{
+                            lotto.push(zahl);
+                            break;
+                        }
+                    }
+                }
+                lotto.sort(function(a, b){return a - b});
+                for(b=0; b >= lotto.length; b++) {
+                    document.write()
+                }
+                 
+                
+            }
+            getNumbers(10);
+        </script>
+    </body>
+</html>
